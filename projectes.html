@@ -17,14 +17,6 @@
     </nav>
   </header>
 
-  <main>
-    <section class="en-construccio">
-      <i class="fas fa-tools"></i>
-      <h2>Pàgina en construcció</h2>
-      <p>Aviat trobaràs aquí els meus projectes de robòtica i programació!</p>
-    </section>
-  </main>
-
 <script>
   fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
     .then(response => response.json())
@@ -48,9 +40,6 @@
         `Temperatura: ${temperatura} ºC\n(Hora de lectura: ${hora} del ${dataFormatejada})`;
     });
 </script>
-
-<div id="sensor">Carregant dades...</div>
-
 
 <div id="sensor">Carregant dades...</div>
   
