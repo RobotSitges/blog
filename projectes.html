@@ -30,7 +30,7 @@
     .then(response => response.json())
     .then(data => {
       // Obtenim el valor de temperatura
-      const temperatura = data.field1;
+      const temperatura = data.field6;
 
       // Obtenim la data de la lectura (en format ISO: "2024-04-10T16:42:01Z")
       const dataHora = new Date(data.created_at);
