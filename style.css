@@ -62,10 +62,24 @@ footer {
   }
 
   nav {
-    flex-direction: column;  /* Posa els enllaços un sota l’altre */
-    align-items: center;
-  }
+  background-color: #444;
+  display: flex;
+  justify-content: center;   /* ⬅ Aquesta línia ja està bé */
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
 
+  /* AFEGEIX aquesta línia per centrar millor el contingut */
+  text-align: center;
+}
+
+  .nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+  
   main {
     padding: 0 0.5rem;  /* Menys espai als costats */
   }
