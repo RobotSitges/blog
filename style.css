@@ -9,12 +9,25 @@ body {
 }
 
 /* Capçalera */
-header {
+/* header {
   background-color: #6c3ebf; /* Violeta intens */
   color: white;
   padding: 1.5rem;
   text-align: center;
+} */
+
+header {
+  text-align: center;
+  padding: 1rem;
 }
+
+.logo {
+  height: 80px;       /* Ajusta la mida segons el disseny */
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 .presentacio {
   max-width: 700px;
