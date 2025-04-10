@@ -41,6 +41,50 @@ header {
 }
 
 
+.targeta-contacte {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f4fb;
+  border: 2px solid #d7c1f1;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.targeta-contacte img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.targeta-contacte h3 {
+  margin: 0.5rem 0;
+  color: #6a0dad;
+}
+
+.targeta-contacte p {
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
+
+.targeta-contacte ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.targeta-contacte li {
+  margin: 0.7rem 0;
+  font-size: 1.1rem;
+}
+
+.targeta-contacte i {
+  color: #6a0dad;
+  margin-right: 0.5rem;
+}
+
+
 /* Menú de navegació */
 nav {
   background-color: #532e8c; /* Lila fosc */
