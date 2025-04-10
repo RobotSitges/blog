@@ -25,6 +25,16 @@
     </section>
   </main>
 
+  <script>
+  fetch("https://api.thingspeak.com/channels/123456/fields/1/last.json")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("sensor").innerText = `Temperatura: ${data.field1} ºC`;
+    });
+</script>
+
+<div id="sensor">Carregant dades...</div>
+  
   <footer>
     <p>&copy; 2025 Robot Sitges · Contingut lliure per ús educatiu</p>
   </footer>
