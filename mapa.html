@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa</title>
+
+  <!-- Full d’estil de Leaflet (CDN segur i lleuger) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-sA+e2t2AFzzlZf5NssR6CbYV4HcRREpBLtGZrL1ZC2I=" 
+    crossorigin=""/>
+
+  <!-- Estils per al contenidor del mapa -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f0fa;
+      color: #2a113d;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 1rem 0;
+    }
+
+    #map {
+      height: 400px;
+      width: 80%;
+      margin: 0 auto 2rem;
+      border: 2px solid #6c3ebf;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>On som? 🗺️</h1>
+  <div id="map"></div>
+
+  <!-- Script de Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-pAfz5VPH3VtSCL1hB/1HjWnMJGzz1u5TqxuVVK0D1r8="
+    crossorigin=""></script>
+
+  <script>
+    // Crear el mapa centrat a Sitges
+    var map = L.map('map').setView([41.236, 1.805], 14);
+
+    // Afegir capa base d’OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Afegir marcador a Sitges
+    L.marker([41.236, 1.805]).addTo(map)
+      .bindPopup('📍 Sitges')
+      .openPopup();
+  </script>
+
+</body>
+</html>
