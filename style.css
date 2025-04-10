@@ -1,16 +1,16 @@
-/* Estils generals per a tota la web */
+/* Cos general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f4f0fa; /* Fons lila molt suau */
+  color: #2a113d;            /* Text violeta fosc */
 }
 
-/* Títol principal */
+/* Capçalera */
 header {
-  background-color: #222;
+  background-color: #6c3ebf; /* Violeta intens */
   color: white;
   padding: 1.5rem;
   text-align: center;
@@ -18,22 +18,28 @@ header {
 
 /* Menú de navegació */
 nav {
-  background-color: #444;
+  background-color: #532e8c; /* Lila fosc */
+  text-align: center;
+}
+
+.nav-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  flex-wrap: wrap; /* Permet que els enllaços baixin en pantalles petites */
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #6c3ebf; /* Reforç del color violeta intens */
 }
 
 /* Contingut principal */
@@ -45,42 +51,26 @@ main {
 
 /* Peu de pàgina */
 footer {
-  background-color: #222;
+  background-color: #6c3ebf;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
 }
 
-/* ----------- ESTILS RESPONSIUS ----------- */
-
-/* Quan la pantalla és petita (mòbils) */
+/* Estils per a pantalles petites */
 @media screen and (max-width: 600px) {
   header {
     font-size: 1.2rem;
     padding: 1rem;
   }
 
-  nav {
-  background-color: #444;
-  display: flex;
-  justify-content: center;   /* ⬅ Aquesta línia ja està bé */
-  gap: 1rem;
-  padding: 1rem;
-  flex-wrap: wrap;
-
-  /* AFEGEIX aquesta línia per centrar millor el contingut */
-  text-align: center;
-}
-
   .nav-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-  
+    flex-direction: column;
+    align-items: center;
+  }
+
   main {
-    padding: 0 0.5rem;  /* Menys espai als costats */
+    padding: 0 0.5rem;
   }
 }
