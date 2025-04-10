@@ -16,6 +16,31 @@ header {
   text-align: center;
 }
 
+.presentacio {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f4fb; /* lila clar */
+  border-left: 5px solid #a07cc7; /* accent violeta */
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.presentacio h2 {
+  font-size: 1.8rem;
+  color: #6a4ca0;
+  margin-bottom: 1rem;
+}
+
+.presentacio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
 /* Menú de navegació */
 nav {
   background-color: #532e8c; /* Lila fosc */
