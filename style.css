@@ -1,61 +1,72 @@
-/* Estils generals de tota la pàgina */
+/* Estils generals per a tota la web */
 body {
-  margin: 0; /* Elimina marges per defecte */
-  padding: 0; /* Elimina espai intern per defecte */
-  font-family: 'Helvetica Neue', sans-serif; /* Tipografia moderna i neta */
-  background-color: #f9f9f9; /* Color de fons clar */
-  color: #333; /* Text gris fosc */
-  min-height: 100vh; /* Alçada mínima de tota la pantalla */
-  display: flex; /* Flexbox per disposició vertical */
-  flex-direction: column;
-}
-
-/* Estils compartits per a header i footer */
-header, footer {
-  background-color: #fff; /* Fons blanc */
-  padding: 1rem; /* Espai interior */
-  text-align: center; /* Centrat horitzontalment */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Ombra suau */
-}
-
-/* Títol dins del header */
-header h1 {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-size: 2rem;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Títol principal */
+header {
+  background-color: #222;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 /* Menú de navegació */
-nav ul {
-  list-style: none; /* Elimina punts de la llista */
-  padding: 0;
-  margin: 1rem 0;
-  display: flex; /* Menú en línia horitzontal */
-  justify-content: center; /* Centrat */
-  gap: 2rem; /* Separació entre enllaços */
+nav {
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap; /* Permet que els enllaços baixin en pantalles petites */
 }
 
-/* Estils dels enllaços del menú */
 nav a {
-  text-decoration: none; /* Elimina subratllat */
-  color: #0077cc; /* Blau viu */
-  font-weight: bold; /* Negreta */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
-  text-decoration: underline; /* Subratlla al passar el ratolí */
+  text-decoration: underline;
 }
 
-/* Contingut principal de cada pàgina */
+/* Contingut principal */
 main {
-  flex-grow: 1; /* Fa que el main ocupi l'espai restant */
-  padding: 2rem; /* Espai interior */
-  max-width: 800px; /* Amplada màxima per llegibilitat */
-  margin: 0 auto; /* Centrat horitzontalment */
-  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 /* Peu de pàgina */
 footer {
-  font-size: 0.8rem; /* Text petit */
-  color: #777; /* Gris suau */
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* ----------- ESTILS RESPONSIUS ----------- */
+
+/* Quan la pantalla és petita (mòbils) */
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;  /* Posa els enllaços un sota l’altre */
+    align-items: center;
+  }
+
+  main {
+    padding: 0 0.5rem;  /* Menys espai als costats */
+  }
 }
