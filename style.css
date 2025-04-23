@@ -4,46 +4,39 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f4f0fa; /* Fons lila molt suau */
-  color: #2a113d;            /* Text violeta fosc */
+  background-color: white; /* Fons blanc */
+  color: #4B0082;          /* Lila fosc pel text principal */
 }
 
 /* Capçalera */
-/* header {
-  background-color: #6c3ebf; /* Violeta intens */
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-} */
-
 header {
+  background-color: #E6E6FA; /* Lila clar */
   text-align: center;
   padding: 1rem;
+  border-bottom: 2px solid #4B0082;
 }
 
 .logo {
-  height: 160px;       /* Ajusta la mida segons el disseny */
+  height: 160px;
   display: block;
   margin: 0 auto;
 }
-
-
 
 .presentacio {
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f8f4fb; /* lila clar */
-  border-left: 5px solid #a07cc7; /* accent violeta */
+  background-color: white;
+  border-left: 5px solid #B57EDC; /* Accent violeta */
   border-radius: 12px;
   font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  color: #333;
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
+  color: #4B0082;
 }
 
 .presentacio h2 {
   font-size: 1.8rem;
-  color: #6a4ca0;
+  color: #4B0082;
   margin-bottom: 1rem;
 }
 
@@ -53,15 +46,14 @@ header {
   margin-bottom: 1rem;
 }
 
-
 .targeta-contacte {
   max-width: 400px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f8f4fb;
-  border: 2px solid #d7c1f1;
+  background-color: white;
+  border: 2px solid #B57EDC;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -73,7 +65,7 @@ header {
 
 .targeta-contacte h3 {
   margin: 0.5rem 0;
-  color: #6a0dad;
+  color: #4B0082;
 }
 
 .targeta-contacte p {
@@ -93,14 +85,13 @@ header {
 }
 
 .targeta-contacte i {
-  color: #6a0dad;
+  color: #4B0082;
   margin-right: 0.5rem;
 }
 
-
 /* Menú de navegació */
 nav {
-  background-color: #532e8c; /* Lila fosc */
+  background-color: #4B0082;
   text-align: center;
 }
 
@@ -121,7 +112,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #6c3ebf; /* Reforç del color violeta intens */
+  background-color: #6c3ebf;
 }
 
 /* Contingut principal */
@@ -133,11 +124,12 @@ main {
 
 /* Peu de pàgina */
 footer {
-  background-color: #6c3ebf;
-  color: white;
+  background-color: #E6E6FA;
+  color: #4B0082;
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
+  border-top: 2px solid #4B0082;
 }
 
 /* Estils per a pantalles petites */
