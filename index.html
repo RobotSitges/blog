@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <!-- Menú de navegació -->
+   <div id="menu"></div>
 
   <!-- Capçalera principal -->
   <header>
@@ -19,16 +21,6 @@
     <!-- <h1>Robot Sitges</h1> -->
     <!-- <p>Web personal de projectes i idees</p> -->
   </header>
-
-  <!-- Menú de navegació -->
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Inici</a>
-      <a href="projectes.html">Projectes</a>
-      <a href="extraescolars.html">Extraescolars</a>
-      <a href="contacta.html">Contacta</a>
-    </div>
-  </nav>
 
   <!-- Contingut principal -->
 
@@ -43,9 +35,16 @@
   </section>
 
   <!-- Peu de pàgina -->
-  <footer>
-    <p>&copy; 2025 Robot Sitges · Continguts lliures per a ús educatiu. Si els fas servir, agraeixo que citis la font :)</p>
-  </footer>
+  <div id="peu"></div>
 
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+    fetch("peu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("peu").innerHTML = data);
+  </script>
+  
 </body>
 </html>
