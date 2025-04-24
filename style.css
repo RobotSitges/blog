@@ -10,7 +10,7 @@ body {
 
 /* Capçalera */
 header {
-  background-color: #E6E6FA; /* Lila clar */
+  background-color: #ffffff; /* Blanc */
   text-align: center;
   padding: 1rem;
   border-bottom: 2px solid #4B0082;
@@ -124,12 +124,12 @@ main {
 
 /* Peu de pàgina */
 footer {
-  background-color: #E6E6FA;
-  color: #4B0082;
+  background-color: #ffffff; /* Blanc */
+  color: #6a0dad; /* Manté el lila per contrast de text */
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
-  border-top: 2px solid #4B0082;
+  border-top: 2px solid #d7c1f1; /* Línia superior subtil */
 }
 
 /* Estils per a pantalles petites */
