@@ -2,50 +2,50 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projectes</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activitats Extraescolars · Robot Sitges</title>
+  <link rel="stylesheet" href="estils.css" />
 </head>
 <body>
-
   <header>
-    <nav>
-      <a href="index.html">Inici</a>
-      <a href="projectes.html">Projectes</a>
-      <a href="contacta.html">Contacta</a>
-    </nav>
+    <img src="logo.png" alt="Robot Sitges" class="logo" />
   </header>
 
-  <script>
-    fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
-      .then(response => response.json())
-      .then(data => {
-        // Obtenim el valor de temperatura
-        const temperatura = data.field6;
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Inici</a>
+      <a href="projectes.html">Projectes</a>
+      <a href="extraescolars.html">Extraescolars</a>
+      <a href="contacta.html">Contacta</a>
+    </div>
+  </nav>
 
-        // Obtenim la data de la lectura (en format ISO: "2024-04-10T16:42:01Z")
-        const dataHora = new Date(data.created_at);
+  <main>
+    <section class="presentacio">
+      <h2>Activitats Extraescolars</h2>
+      <p>
+        A RobotSitges oferim activitats extraescolars de robòtica i programació adreçades a infants i joves.
+        L'objectiu és fomentar la creativitat, el pensament computacional i el treball en equip mitjançant el joc i l'experimentació tecnològica.
+      </p>
 
-        // Format català: HH:MM del DD/MM/YYYY
-        const hora = dataHora.toLocaleTimeString('ca-ES', {
-          hour: '2-digit',
-          minute: '2-digit'
-        });
+      <h3>Què oferim?</h3>
+      <ul>
+        <li>🧠 Tallers de robòtica educativa amb LEGO, Arduino i altres kits</li>
+        <li>💻 Introducció a la programació amb Scratch i Python</li>
+        <li>🤖 Disseny de projectes en equip amb sensors i microcontroladors</li>
+        <li>🛠️ Participació en concursos i exhibicions</li>
+      </ul>
 
-        const dataFormatejada = dataHora.toLocaleDateString('ca-ES');
+      <h3>Horaris i inscripcions</h3>
+      <p>
+        Les activitats es realitzen dues tardes per setmana a diversos centres de Sitges. Per a més informació o per inscriure's,
+        visita la pàgina de <a href="contacta.html">Contacta</a>.
+      </p>
+    </section>
+  </main>
 
-        // Mostrem al navegador
-        document.getElementById("sensor").innerText = 
-          `Temperatura: ${temperatura} ºC\n(Hora de lectura: ${hora} del ${dataFormatejada})`;
-      });
-  </script>
-
-  <div id="sensor">Carregant dades...</div>
-  
   <footer>
-    <p>&copy; 2025 Robot Sitges · Contingut lliure per ús educatiu</p>
+    &copy; 2025 Robot Sitges · Continguts lliures per a ús educatiu
   </footer>
-
 </body>
 </html>
