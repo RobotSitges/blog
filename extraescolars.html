@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projectes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Inici</a>
+      <a href="projectes.html">Projectes</a>
+      <a href="contacta.html">Contacta</a>
+    </nav>
+  </header>
+
+  <script>
+    fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
+      .then(response => response.json())
+      .then(data => {
+        // Obtenim el valor de temperatura
+        const temperatura = data.field6;
+
+        // Obtenim la data de la lectura (en format ISO: "2024-04-10T16:42:01Z")
+        const dataHora = new Date(data.created_at);
+
+        // Format català: HH:MM del DD/MM/YYYY
+        const hora = dataHora.toLocaleTimeString('ca-ES', {
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        const dataFormatejada = dataHora.toLocaleDateString('ca-ES');
+
+        // Mostrem al navegador
+        document.getElementById("sensor").innerText = 
+          `Temperatura: ${temperatura} ºC\n(Hora de lectura: ${hora} del ${dataFormatejada})`;
+      });
+  </script>
+
+  <div id="sensor">Carregant dades...</div>
+  
+  <footer>
+    <p>&copy; 2025 Robot Sitges · Contingut lliure per ús educatiu</p>
+  </footer>
+
+</body>
+</html>
