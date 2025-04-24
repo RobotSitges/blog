@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Títol de la pàgina · Robot Sitges</title>
+  <link rel="stylesheet" href="estils.css" />
+</head>
+<body>
+  <!-- Capçalera i menú de navegació -->
+  <div id="menu"></div>
+
+  <main>
+    <section class="presentacio">
+      <h2>Títol de la secció</h2>
+      <p>
+        Aquí va el contingut de la pàgina. Pots utilitzar paràgrafs, llistes, imatges,
+        o qualsevol altra cosa que necessitis.
+      </p>
+    </section>
+  </main>
+
+  <!-- Peu de pàgina -->
+  <div id="peu"></div>
+
+  <!-- JavaScript per carregar menú i peu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+      
+    fetch("peu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("peu").innerHTML = data);
+  </script>
+</body>
+</html>
