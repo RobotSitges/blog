@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="estils.css" />
 </head>
 <body>
-  <!-- Menú de navegació i capçalera-->
+  <!-- Menú de navegació i capçalera -->
   <div id="menu"></div>
 
+  <!-- Contingut principal -->
   <main>
     <section class="presentacio">
       <h2>Activitats Extraescolars</h2>
@@ -28,12 +29,12 @@
 
       <h3>Horaris i inscripcions</h3>
       <p>
-        Les activitats es realitzen dues tardes per setmana a diversos centres de Sitges. Per a més informació o per inscriure's,
-        visita la pàgina de <a href="contacta.html">Contacta</a>.
+        Les activitats es realitzen dues tardes per setmana a diversos centres de Sitges.
+        Per a més informació o per inscriure's, visita la pàgina de <a href="contacta.html">Contacta</a>.
       </p>
     </section>
   </main>
-  
+
   <!-- Peu de pàgina -->
   <div id="peu"></div>
 
@@ -41,10 +42,10 @@
     fetch("menu.html")
       .then(res => res.text())
       .then(data => document.getElementById("menu").innerHTML = data);
+      
     fetch("peu.html")
       .then(res => res.text())
       .then(data => document.getElementById("peu").innerHTML = data);
   </script>
-
 </body>
 </html>
