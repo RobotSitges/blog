@@ -35,8 +35,17 @@
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 Robot Sitges · Continguts lliures per a ús educatiu
-  </footer>
+  <!-- Peu de pàgina -->
+  <div id="peu"></div>
+
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+    fetch("peu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("peu").innerHTML = data);
+  </script>
+
 </body>
 </html>
