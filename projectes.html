@@ -8,15 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
-  <header>
-    <nav>
-      <a href="index.html">Inici</a>
-      <a href="projectes.html">Projectes</a>
-      <a href="contacta.html">Contacta</a>
-    </nav>
-  </header>
-
+  <!-- Menú de navegació i capçalera-->
+  <div id="menu"></div>
+ 
   <script>
     fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
       .then(response => response.json())
