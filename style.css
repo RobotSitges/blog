@@ -1,63 +1,121 @@
-/* Cos general */
+/* ---------------------------------
+   Cos general i estil base
+----------------------------------- */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: white; /* Fons blanc */
-  color: #4B0082;          /* Lila fosc pel text principal */
+  background-color: white;      /* Fons blanc */
+  color: #4B0082;               /* Text lila fosc */
 }
 
-/* Capçalera */
-header {
-  background-color: #ffffff; /* Blanc */
-  text-align: center;
-  padding: 1rem;
-  border-bottom: 2px solid #4B0082;
-}
-
+/* ---------------------------------
+   Capçalera i menú de navegació
+----------------------------------- */
 .header {
-  background-color: #4B0082; /* Fons lila intens */
+  background-color: #4B0082;    /* Fons lila fosc */
   padding: 1rem 0;
 }
 
-.header .container {
+.header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  justify-content: center;      /* Centra tot el bloc (logo + menú) */
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .logo {
   height: 60px;
 }
 
+/* Navegació principal */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* ---------------------------------
+   Contingut principal
+----------------------------------- */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Secció de presentació (caixa estilitzada) */
 .presentacio {
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: white;
-  border-left: 5px solid #B57EDC; /* Accent violeta */
+  border-left: 5px solid #B57EDC;
   border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
   box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
   color: #4B0082;
 }
 
 .presentacio h2 {
   font-size: 1.8rem;
-  color: #4B0082;
   margin-bottom: 1rem;
 }
 
 .presentacio p {
   font-size: 1.1rem;
-  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
+/* ---------------------------------
+   Galeria d’imatges
+----------------------------------- */
+.galeria {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.galeria h3 {
+  font-size: 1.6rem;
+  color: #6a4ca0;
+  margin-bottom: 1rem;
+}
+
+.imatges-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.imatges-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.imatges-galeria img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------------------------
+   Targeta de contacte
+----------------------------------- */
 .targeta-contacte {
   max-width: 400px;
   margin: 2rem auto;
@@ -67,7 +125,6 @@ header {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .targeta-contacte img {
@@ -101,95 +158,26 @@ header {
   margin-right: 0.5rem;
 }
 
-/* Menú de navegació */
-nav {
-  background-color: #4B0082;
-  text-align: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ddd;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
-nav a:hover {
-  background-color: #6c3ebf;
-}
-
-/* Contingut principal */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.galeria {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-}
-
-.galeria h3 {
-  font-size: 1.6rem;
-  color: #6a4ca0;
-  margin-bottom: 1rem;
-}
-
-.imatges-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.imatges-galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.imatges-galeria img:hover {
-  transform: scale(1.03);
-}
-
-/* Peu de pàgina */
+/* ---------------------------------
+   Peu de pàgina
+----------------------------------- */
 footer {
-  background-color: #ffffff; /* Blanc */
-  color: #6a0dad; /* Manté el lila per contrast de text */
+  background-color: #ffffff;
+  color: #6a0dad;
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
-  border-top: 2px solid #d7c1f1; /* Línia superior subtil */
+  border-top: 2px solid #d7c1f1;
 }
 
-/* Estils per a pantalles petites */
-
+/* ---------------------------------
+   Adaptació per a dispositius mòbils
+----------------------------------- */
 @media (max-width: 768px) {
-  .header .container {
+  .header-inner {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .nav-links {
