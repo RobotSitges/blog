@@ -17,22 +17,21 @@ header {
 }
 
 .header {
-  background-color: #ffffff; /* Fons blanc */
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #4B0082; /* Fons lila intens */
+  padding: 1rem 0;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logo {
-  height: 50px; /* O ajusta la mida que vulguis */
-  margin-right: 20px;
+  height: 60px;
 }
 
 .presentacio {
@@ -110,13 +109,19 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .nav-links a {
+  color: white;
   text-decoration: none;
-  color: #4B0082; /* Color lila */
   font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
 }
 
 nav a {
