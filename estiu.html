@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tallers d'Estiu de Robòtica i Programació a Sitges 2025 | Robot Sitges</title>
+  <meta name="description" content="Apunta't als tallers d'estiu de Robot Sitges! Activitats tecnològiques per a nens i joves: robòtica amb LEGO, programació amb Scratch, Python i Arduino. Grups reduïts.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menú de navegació i capçalera -->
+  <div id="menu"></div>
+
+  <!-- Contingut principal -->
+  <main class="presentacio">
+    <h1><i class="fas fa-sun"></i> Tallers d'Estiu 2025: Robòtica i Programació a Sitges</h1>
+
+    <p>Aquest <strong>juliol</strong>, a <strong>Robot Sitges</strong> oferim <strong>tallers tecnològics per a infants i joves</strong> interessats en la <strong>robòtica educativa</strong> i la <strong>programació creativa</strong>. Són activitats lúdiques i educatives per gaudir de la tecnologia durant les vacances escolars.</p>
+
+    <h2>🧭 Format i Continguts dels Tallers</h2>
+    <ul>
+      <li><strong>Durada:</strong> 1 hora al dia, de dilluns a divendres (5 hores/setmana)</li>
+      <li><strong>Horari:</strong> Matins entre les 9:30 i 13:30 · Tardes entre les 16:30 i 19:30</li>
+      <li>Grups reduïts (màxim 4 alumnes) organitzats per edat i nivell</li>
+      <li><strong>Preu:</strong> 90 €/setmana (amb descompte per a germans)</li>
+      <li>🤖 <strong>Robòtica amb LEGO Educació</strong></li>
+      <li>🧠 <strong>Programació amb micro:bit</strong></li>
+      <li>🐍 <strong>Python per a joves</strong></li>
+      <li>🎮 <strong>Creació de videojocs amb Scratch</strong></li>
+      <li>💡 <strong>Electrònica creativa amb Arduino</strong></li>
+    </ul>
+
+    <h2>📅 Calendari Setmanal de Tallers</h2>
+    <ul>
+      <li>Setmana 1: Del 30 de juny al 4 de juliol</li>
+      <li>Setmana 2: Del 7 a l'11 de juliol</li>
+      <li>Setmana 3: Del 14 al 18 de juliol</li>
+      <li>Setmana 4: Del 21 al 25 de juliol</li>
+      <li>Setmana 5: Del 28 de juliol a l'1 d'agost</li>
+    </ul>
+
+    <h2>📩 Com Fer la Inscripció</h2>
+    <p>Contacta amb nosaltres per reservar plaça o fer qualsevol consulta:</p>
+    <ul>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:info@robotsitges.com">info@robotsitges.com</a></li>
+      <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/34669695696" target="_blank">669 695 696</a></li>
+      <li><i class="fas fa-phone"></i> <a href="tel:+34669695696">669 695 696</a></li>
+    </ul>
+  </main>
+
+  <!-- Peu de pàgina -->
+  <div id="peu"></div>
+
+  <!-- Carrega automàtica del menú i peu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+
+    fetch("peu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("peu").innerHTML = data);
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
