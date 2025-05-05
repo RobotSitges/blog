@@ -2,22 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robotsitges.cat/</loc>
-    <lastmod>2025-05-05</lastmod>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://robotsitges.cat/contacta.html</loc>
-    <lastmod>2025-05-05</lastmod>
-    <priority>0.8</priority>
+    <loc>https://robotsitges.cat/contacte.html</loc>
   </url>
   <url>
-    <loc>https://robotsitges.cat/estiu.html</loc>
-    <lastmod>2025-05-05</lastmod>
-    <priority>0.8</priority>
+    <loc>https://robotsitges.cat/avis_legal.html</loc>
   </url>
   <url>
-    <loc>https://robotsitges.cat/extraescolars.html</loc>
-    <lastmod>2025-05-05</lastmod>
-    <priority>0.8</priority>
+    <loc>https://robotsitges.cat/politica_privacitat.html</loc>
   </url>
 </urlset>
