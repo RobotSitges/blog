@@ -180,6 +180,13 @@ main {
   margin-bottom: 1rem;
 }
 
+.explicacio {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
 /* ---------------------------------
    Estiu
 ----------------------------------- */
