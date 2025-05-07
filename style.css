@@ -158,6 +158,27 @@ main {
   margin-right: 0.5rem;
 }
 
+/* ---------------------------------
+   Bloc dades projecte 1
+----------------------------------- */
+
+.bloc-dades {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-left: 5px solid #B57EDC;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
+  color: #4B0082;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.bloc-dades h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
 
 /* ---------------------------------
    Estiu
