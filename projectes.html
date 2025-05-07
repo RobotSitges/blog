@@ -3,51 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projectes</title>
+  <title>Projectes · Robot Sitges</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Menú de navegació i capçalera-->
+  <!-- Capçalera i menú -->
   <div id="menu"></div>
- 
-  <script>
-    fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
-      .then(response => response.json())
-      .then(data => {
-        // Obtenim el valor de temperatura
-        const temperatura = data.field6;
 
-        // Obtenim la data de la lectura (en format ISO: "2024-04-10T16:42:01Z")
-        const dataHora = new Date(data.created_at);
-
-        // Format català: HH:MM del DD/MM/YYYY
-        const hora = dataHora.toLocaleTimeString('ca-ES', {
-          hour: '2-digit',
-          minute: '2-digit'
-        });
-
-        const dataFormatejada = dataHora.toLocaleDateString('ca-ES');
-
-        // Mostrem al navegador
-        document.getElementById("sensor").innerText = 
-          `Temperatura: ${temperatura} ºC\n(Hora de lectura: ${hora} del ${dataFormatejada})`;
-      });
-  </script>
-
-  <div id="sensor">Carregant dades...</div>
+  <main>
+    <section class="bloc-dades">
+      <h2><i class="fas fa-thermometer-half"></i> Temperatura del Projecte</h2>
+      <p id="sensor">Carregant dades...</p>
+    </section>
+  </main>
 
   <!-- Peu de pàgina -->
   <div id="peu"></div>
 
   <script>
+    // Carrega menú i peu de pàgina
     fetch("menu.html")
       .then(res => res.text())
       .then(data => document.getElementById("menu").innerHTML = data);
     fetch("peu.html")
       .then(res => res.text())
       .then(data => document.getElementById("peu").innerHTML = data);
+
+    // Dades de temperatura
+    fetch("https://api.thingspeak.com/channels/2657753/fields/6/last.json")
+      .then(response => response.json())
+      .then(data => {
+        const temperatura = data.field6;
+        const dataHora = new Date(data.created_at);
+        const hora = dataHora.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
+        const dataFormatejada = dataHora.toLocaleDateString('ca-ES');
+
+        document.getElementById("sensor").innerText =
+          `Temperatura: ${temperatura} ºC\n(Hora de lectura: ${hora} del ${dataFormatejada})`;
+      });
   </script>
-  
 </body>
 </html>
